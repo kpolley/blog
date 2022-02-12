@@ -1,0 +1,57 @@
+baseurl = "https://kylepolley.com"
+languageCode = "en"
+title = "Kyle Polley"
+theme = "kiss"
+Paginate = 10 # Number of posts per page
+enableRobotsTXT = true
+
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+authorName = "Kyle Polley" # Author full name
+authorEmail = "kpolley@outlook.com" # Author email
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[params.test]
+subtitle = "My outlet for crazy security ideas; some might actually be good"
+
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = false # Adds OpenGraph and Twitter cards
+homeTitle = "Kpolley" # Title for home page
+poweredby = false # Adds powered by hugo and kiss below Copyright
+related = false # Includes related articles at the bottom of the article
+codeCopy = true # Add copy button above code blocks
+taxonomiesCount = false # Add taxonomies count
+
+[params.features]
+disqusOnDemand = false  # Load Disqus comments on click
+
+
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
+
+[params.opengraph.twitter]
+page = "" # Twitter Page username. If not set, params.social.twitter will be used.
+
+[params.social]
+twitter = "KP0113Y"
+github = "kpolley"
+email = "kpolley@outlook.com"
+linkedin = "kylepolley"
+facebook = ""
+instagram = ""
+codepen = ""
+rss = "index.xml" # Add this to show RSS button in social.
+
+[params.social.config]
+platforms = ["twitter","github","linkedin","rss"]
+
+[taxonomies]
+tag ="tags"
+
+[blackfriday]
+hrefTargetBlank = false
