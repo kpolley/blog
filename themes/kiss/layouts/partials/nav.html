@@ -3,7 +3,7 @@
     <nav id="nav-main" class="nav">
       <div id="nav-name" class="nav-left">
         <a id="nav-anchor" class="nav-item" href="{{ .Site.BaseURL }}">
-          <h1 id="nav-heading" class="title is-4">{{ .Site.Title }}</h1>
+          <h1 id="nav-heading" class="title is-4">{{ .Site.Params.Info.homeTitle }}</h1>
         </a>
       </div>
       <div class="nav-right">
@@ -25,6 +25,11 @@
       </div>
     </nav>
 
+    <!-- Subtitle -->
+    <a href="{{ .Site.BaseURL }}">
+      <h1 id="nav-heading" class="title is-6">{{ .Site.Params.Info.homeSubtitle }}</h1>
+    </a>
+   
     <nav class="nav">
       {{ if (isset .Site.Params "sections_left" ) }}
       <div class="nav-left">

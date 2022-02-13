@@ -1,6 +1,6 @@
 baseurl = "https://kpolley.github.io/blog"
 languageCode = "en"
-title = "Kyle Polley"
+# title = "Kpolley Blog"
 theme = "kiss"
 Paginate = 10 # Number of posts per page
 enableRobotsTXT = true
@@ -13,13 +13,11 @@ authorEmail = "kpolley@outlook.com" # Author email
 [params.assets]
 customCSS = ["css/custom.css"]
 
-[params.test]
-subtitle = "My outlet for crazy security ideas; some might actually be good"
-
 [params.info]
+homeTitle = "Kpolley Blog" # Title for home page
+homeSubtitle = "My outlet for ideas in security; some might actually be good"
 adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = false # Adds OpenGraph and Twitter cards
-homeTitle = "Kpolley" # Title for home page
 poweredby = false # Adds powered by hugo and kiss below Copyright
 related = false # Includes related articles at the bottom of the article
 codeCopy = true # Add copy button above code blocks
