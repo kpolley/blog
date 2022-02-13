@@ -1,4 +1,4 @@
-baseurl = "https://kpolley.github.io/blog"
+baseurl = "https://www.kpolley.com"
 languageCode = "en"
 # title = "Kpolley Blog"
 theme = "kiss"
