@@ -2,8 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Bringing D&R to New Heights with Honeypots | Kyle Polley</title>
-<link href=https://kpolley.github.io/blog/index.xml rel=alternate type=application/rss+xml title="Kyle Polley">
+<title>Advancing Threat Detection & Response with Honeypots | </title>
+<link href=https://kpolley.github.io/blog/index.xml rel=alternate type=application/rss+xml title>
 <link rel=stylesheet href=/blog/css/style.css><link rel=stylesheet href=https://kpolley.github.io/blog/css/custom.css><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
@@ -19,7 +19,7 @@
 <nav id=nav-main class=nav>
 <div id=nav-name class=nav-left>
 <a id=nav-anchor class=nav-item href=https://kpolley.github.io/blog>
-<h1 id=nav-heading class="title is-4">Kyle Polley</h1>
+<h1 id=nav-heading class="title is-4">Kpolley Blog</h1>
 </a>
 </div>
 <div class=nav-right>
@@ -42,6 +42,9 @@
 </a></nav>
 </div>
 </nav>
+<a href=https://kpolley.github.io/blog>
+<h1 id=nav-heading class="title is-6">My outlet for ideas in security; some might actually be good</h1>
+</a>
 <nav class=nav>
 </nav>
 </div>
@@ -52,13 +55,13 @@
 <div class="subtitle tags is-6 is-pulled-right">
 </div>
 <h2 class="subtitle is-6">February 11, 2022</h2>
-<h1 class=title>Bringing D&R to New Heights with Honeypots</h1>
+<h1 class=title>Advancing Threat Detection & Response with Honeypots</h1>
 <div class=content>
-<p><em>Why honeypots should be included at the core of a D&R program</em></p>
+<p><em>Why honeypots should be a fundamental component of a D&R program.</em></p>
 <h1 id=traditional-detection-eng>Traditional Detection Eng.</h1>
-<p>There are plenty of resources out there such as the MITRE ATT&CK Matrix which describe common attack behaviors. Any Detection and Response (D&R) engineer could decribe in great detail multiple ways an attacker could move across their environment. They could even tell you what the attacker would likely target!</p>
+<p>There are plenty of resources which describe common attack behaviors. Any Detection and Response (D&R) engineer could decribe in great detail multiple ways an attacker could move across their environment. They could even tell you what the attacker would likely target!</p>
 <p>So why is detecting malicious activity such a difficult task? The problem is that there are <em>so</em> many ways to move laterally, escalate privileges, and exfiltrate data. On top of that, attackers leverage tools that are the same tools most engineers use to do their job such as <code>curl</code>, <code>ssh</code>, <code>nmap</code>, and <code>powershell</code>. <strong>The only difference between attacker behavior and benign behavior is intent  &ndash;  and intent is incredibly hard to detect.</strong></p>
-<pre tabindex=0><code>$ curl http://169.254.169.254/latest/meta-data/
+<pre tabindex=0><code>$ curl http://169.254.169.254/latest/meta-data/iam/security-credentials
 </code></pre>
 <p style=text-align:center>
 <i>is this an attacker stealing AWS creds or an engineer debugging?</i>
@@ -70,8 +73,8 @@
 <li>If your org forbids the use of the <code>root</code> AWS account, then write a detection that triggers when the <code>root</code> account is used. You&rsquo;ve just built a fantastic alert that will generate high signal for <em>compromised credentials!</em></li>
 <li>If your org forbids the use of <code>powershell</code> on CX agent machines, then write a detection that triggers when <code>powershell</code> is used on an CX agent machine. It is a great detection for <em>execution</em> attempts!</li>
 </ul>
-<p>Policy-based detections are great because they are super easy to write and deploy. More importantly though, <strong>policy-based detections leverage one of the greatest advantages most D&R teams don&rsquo;t even realize they have  &ndash;  knowledge and control over the environment they are hired to protect.</strong></p>
-<p>Attackers entering the environment for the first time have no idea where they are or what the environment looks like. Policy-based detections use that advantage to cause the attacker to reveal themselves.</p>
+<p>Policy-based detections are great because they are super easy to write and deploy. More importantly though, <strong>policy-based detections leverage one of the greatest advantages most D&R teams don&rsquo;t even realize they have &ndash; knowledge and control over the environment they are hired to protect.</strong></p>
+<p>Attackers entering the environment for the first time have no idea where they are or what the environment looks like. Policy-based detections leverage that fact to cause the attacker to reveal themselves.</p>
 <h1 id=intrusion-detection-honeypots>Intrusion Detection Honeypots</h1>
 <p>The issue with policy-based detections is that there needs to be a policy that can be violated. This limitation restricts D&R teams from really taking advantage of policy-based detections across the org, especially in very open environments such as a typical development env.</p>
 <p>An Intrusion Detection Honeypot (IDH) is a resource created for the purpose of triggering an alert when they are probed, used, or compromised. <strong>IDH&rsquo;s has the same benefits as policy-based detections, but it allows D&R teams to <em><strong>create</strong></em> policies which can be scattered across your environment.</strong></p>
@@ -102,10 +105,13 @@
 <p style=text-align:center>
 <i>Sample honeypot system</i>
 </p></p>
-<p>If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to presue, the IDH effectively lures them away from the actual attack path and into a rabbit hole that leads them to an S3 bucket with a whole lot of valueless data. In addition, the Incident Response (IR) team is getting notified on every move the attacker makes on the honeypots. <strong>Even if it only takes the attacker 10 minutes to realize they were deceived, that is an extra 10 minutes the IR gets back to contain the threat!</strong></p>
+<p>If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to presue, the IDH effectively lures them away from the actual attack path and into a rabbit hole full of frustration and valueless data. In addition, the Incident Response (IR) team is getting notified on every move the attacker makes on the honeypots. <strong>Even if it takes the attacker only 10 minutes to realize they were deceived, that is an extra 10 minutes the IR gets back to contain the threat!</strong></p>
 <h1 id=detection--response-------deception>Detection & Response &ndash; & Deception</h1>
-<p>Intrusion Detection Honeypots are extremely high signal, easy to deploy, and go above the D&R call of duty by not only detecting attacks but actively deceiving the attacker away from their target. I envision a future where honeypots are included at the core of a D&R program and deception becomes an additional feature that the team uses to increase their odds in stopping attacks and providing value to the org and security team.</p>
-<p>We can be called D&R&D <em>(ok, I&rsquo;m half kidding.)</em></p>
+<p>Intrusion Detection Honeypots are extremely high signal and easy to deploy. In addition, IDH&rsquo;s go beyond a typical D&R&rsquo;s call of duty by not only detecting attackers but actively deceiving the attacker. This additional layer of deception makes it more difficult for the attacker to navigate the environment, lures the attacker away from their target, and gives Incident Response team members extra time in a scenario where every minute counts.</p>
+<p>I envision a future where honeypots are included at the core of a D&R program and deception becomes an additional feature that the team uses to increase their odds in stopping attacks and providing value to the org and security team.</p>
+<p><strong>We can be called D&R&D</strong> <em>(ok, I&rsquo;m half kidding.)</em></p>
+<h2 id=additional-reading>Additional Reading</h2>
+<p><em><a href=https://www.amazon.com/Intrusion-Detection-Honeypots-through-Deception/dp/1735188301>Intrusion Detection Honeypots: Detection Through Deception</a></em> by <a href=https://twitter.com/chrissanders88>Chris Sanders</a></p>
 </div>
 </div>
 </section>
