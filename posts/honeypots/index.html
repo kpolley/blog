@@ -59,7 +59,7 @@
 <div class=content>
 <p><em>Why honeypots should be a fundamental component of a D&R program.</em></p>
 <h1 id=traditional-detection-eng>Traditional Detection Eng.</h1>
-<p>There are plenty of resources which describe common attack behaviors. Any Detection and Response (D&R) engineer could decribe in great detail multiple ways an attacker could move across their environment. They could even tell you what the attacker would likely target!</p>
+<p>There are plenty of resources which describe common attack behaviors. Any Detection and Response (D&R) engineer could describe in great detail multiple ways an attacker could move across their environment. They could even tell you what the attacker would likely target!</p>
 <p>So why is detecting malicious activity such a difficult task? The problem is that there are <em>so</em> many ways to move laterally, escalate privileges, and exfiltrate data. On top of that, attackers leverage tools that are the same tools most engineers use to do their job such as <code>curl</code>, <code>ssh</code>, <code>nmap</code>, and <code>powershell</code>. <strong>The only difference between attacker behavior and benign behavior is intent  &ndash;  and intent is incredibly hard to detect.</strong></p>
 <pre tabindex=0><code>$ curl http://169.254.169.254/latest/meta-data/iam/security-credentials
 </code></pre>
@@ -98,14 +98,14 @@
 </ul>
 <p><strong>Instead of squeezing signal out of a lot of noise, Intrusion Detection Honeypots enable D&R teams to create their own signal!</strong></p>
 <h1 id=deception>Deception</h1>
-<p>I&rsquo;ve made my case as to why Intrusion Detection Honeypots can aid immensly in detecting attacks, but there is one more benefit I&rsquo;d like to bring up and that is the addition of <strong>deception</strong>. A well designed IDH system can not only detect an attacker in your environment, but can actively lure the attackers <em>away</em> from the resources you are trying to protect (ex. customer data, production servers, etc.) and into a safe, controlled environment.</p>
+<p>I&rsquo;ve made my case as to why Intrusion Detection Honeypots can aid immensely in detecting attacks, but there is one more benefit I&rsquo;d like to bring up and that is the addition of <strong>deception</strong>. A well designed IDH system can not only detect an attacker in your environment, but can actively lure the attackers <em>away</em> from the resources you are trying to protect (ex. customer data, production servers, etc.) and into a safe, controlled environment.</p>
 <p>For example:</p>
 <p>Let&rsquo;s say an attacker lands onto a server in your environment. There are 3 paths they realize they could take: IAM credentials, SSH keys, and an RDP windows server. Little does the attacker know, only the SSH keys are legitimate and lead to their target; the IAM creds and windows servers are actually honeypots!</p>
 <p><img src=/blog/idh_example.png#c alt="IDH Example">
 <p style=text-align:center>
 <i>Sample honeypot system</i>
 </p></p>
-<p>If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to presue, the IDH effectively lures them away from the actual attack path and into a rabbit hole full of frustration and valueless data. In addition, the Incident Response (IR) team is getting notified on every move the attacker makes on the honeypots. <strong>Even if it takes the attacker only 10 minutes to realize they were deceived, that is an extra 10 minutes the IR gets back to contain the threat!</strong></p>
+<p>If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to pursue, the IDH effectively lures them away from the actual attack path and into a rabbit hole full of frustration and valueless data. In addition, the Incident Response (IR) team is getting notified on every move the attacker makes on the honeypots. <strong>Even if it takes the attacker only 10 minutes to realize they were deceived, that is an extra 10 minutes the IR gets back to contain the threat!</strong></p>
 <h1 id=detection--response-------deception>Detection & Response &ndash; & Deception</h1>
 <p>Intrusion Detection Honeypots are extremely high signal and easy to deploy. In addition, IDH&rsquo;s go beyond a typical D&R&rsquo;s call of duty by not only detecting attackers but actively deceiving the attacker. This additional layer of deception makes it more difficult for the attacker to navigate the environment, lures the attacker away from their target, and gives Incident Response team members extra time in a scenario where every minute counts.</p>
 <p>I envision a future where honeypots are included at the core of a D&R program and deception becomes an additional feature that the team uses to increase their odds in stopping attacks and providing value to the org and security team.</p>
