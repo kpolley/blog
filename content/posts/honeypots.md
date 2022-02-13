@@ -3,8 +3,8 @@ title: "Advancing Threat Detection & Response with Honeypots"
 date: 2022-02-11T17:35:45-08:00
 draft: false
 ---
-_Why honeypots should be a fundamental component of a D&R program_
-
+_Why honeypots should be a fundamental component of a D&R program._
+<!--more-->
 # Traditional Detection Eng.
 There are plenty of resources which describe common attack behaviors. Any Detection and Response (D&R) engineer could decribe in great detail multiple ways an attacker could move across their environment. They could even tell you what the attacker would likely target! 
 
@@ -26,7 +26,7 @@ For example:
 
 Policy-based detections are great because they are super easy to write and deploy. More importantly though, **policy-based detections leverage one of the greatest advantages most D&R teams don't even realize they have  --  knowledge and control over the environment they are hired to protect.** 
 
-Attackers entering the environment for the first time have no idea where they are or what the environment looks like. Policy-based detections exploit that fact to cause the attacker to reveal themselves.
+Attackers entering the environment for the first time have no idea where they are or what the environment looks like. Policy-based detections leverage that fact to cause the attacker to reveal themselves.
 
 # Intrusion Detection Honeypots
 The issue with policy-based detections is that there needs to be a policy that can be violated. This limitation restricts D&R teams from really taking advantage of policy-based detections across the org, especially in very open environments such as a typical development env. 
@@ -62,5 +62,7 @@ Intrusion Detection Honeypots are extremely high signal and easy to deploy. In a
 
 I envision a future where honeypots are included at the core of a D&R program and deception becomes an additional feature that the team uses to increase their odds in stopping attacks and providing value to the org and security team.
 
-We can be called D&R&D *(ok, I'm half kidding.)*
+**We can be called D&R&D** *(ok, I'm half kidding.)*
 
+## Additional Reading
+*[Intrusion Detection Honeypots: Detection Through Deception](https://www.amazon.com/Intrusion-Detection-Honeypots-through-Deception/dp/1735188301)* by [Chris Sanders](https://twitter.com/chrissanders88)
