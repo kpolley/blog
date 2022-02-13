@@ -50,7 +50,7 @@ For example:
 
 Let's say an attacker lands onto a server in your environment. There are 3 paths they realize they could take: IAM credentials, SSH keys, and an RDP windows server. Little does the attacker know, only the SSH keys are legitimate and lead to their target; the IAM creds and windows servers are actually honeypots!
 
-![IDH Example](/blog/idh_example.png#c)
+![IDH Example](/idh_example.png#c)
 {{< center >}}
     <i>Sample honeypot system</i>
 {{< /center >}}
