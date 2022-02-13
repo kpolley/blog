@@ -20,7 +20,7 @@ adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = false # Adds OpenGraph and Twitter cards
 poweredby = false # Adds powered by hugo and kiss below Copyright
 related = false # Includes related articles at the bottom of the article
-codeCopy = true # Add copy button above code blocks
+codeCopy = false # Add copy button above code blocks
 taxonomiesCount = false # Add taxonomies count
 
 [params.features]
