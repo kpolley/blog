@@ -8,7 +8,7 @@ _Why honeypots should be a fundamental component of a D&R program._
 # Traditional Detection Eng.
 There are plenty of resources which describe common attack behaviors. Any Detection and Response (D&R) engineer could describe in great detail multiple ways an attacker could move across their environment. They could even tell you what the attacker would likely target! 
 
-So why is detecting malicious activity such a difficult task? The problem is that there are *so* many ways to move laterally, escalate privileges, and exfiltrate data. On top of that, attackers leverage tools that are the same tools most engineers use to do their job such as `curl`, `ssh`, `nmap`, and `powershell`.  **The only difference between attacker behavior and benign behavior is intent  --  and intent is incredibly hard to detect.**
+So why is detecting malicious activity such a difficult task? The problem is that there are *so* many ways to move laterally, escalate privileges, and exfiltrate data. On top of that, attackers leverage the same tools most engineers use to do their job such as `curl`, `ssh`, `nmap`, and `powershell`.  **The only difference between attacker behavior and benign behavior is intent  --  and intent is incredibly hard to detect.**
 
 ```
 $ curl http://169.254.169.254/latest/meta-data/iam/security-credentials
