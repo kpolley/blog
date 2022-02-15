@@ -1,6 +1,6 @@
 ---
 title: "Advancing Threat Detection & Response with Honeypots"
-date: 2022-02-11T17:35:45-08:00
+date: 2022-02-15T09:35:45-08:00
 draft: false
 ---
 _Why honeypots should be a fundamental component of a D&R program._
