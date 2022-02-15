@@ -42,7 +42,7 @@ For example:
 IDHs can be super simple and provide impact on it's own or they can interact with each other to create a networked system of digital trip-wires and rabbit holes. Ex.  *honey tokens* authenticate into a *honey user* which has access to *honey data* etc.
 
 # Deception
-This brings me to a newish concept for D&R: the addition of **deception**. A well designed IDH system can not only detect an attacker in your environment, but can actively lure the attackers *away* from the resources you are trying to protect (ex. customer data, company secrets, etc.) and into a safe, controlled environment. 
+This brings me to a typically forgotten concept to D&R: the addition of deception. **A well designed IDH system can not only detect an attacker in your environment, but can actively lure the attackers ***away*** from the resources you are trying to protect** (ex. customer data, company secrets, etc.) and into a safe, controlled environment. 
 
 For example: 
 
@@ -56,9 +56,9 @@ Let's say an attacker lands onto a server in your environment. There are 3 paths
 If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to pursue, the IDH effectively lures them away from the actual attack path and into a rabbit hole full of frustration and valueless data. In addition, the Incident Response (IR) team gets high-signal notifications describing every move the attacker makes on the honeypots. **Even if it takes the attacker only 10 minutes to realize they were deceived, that is an extra 10 minutes the IR gets back to contain the threat!** 
 
 # Detection & Response  --  & Deception
-Intrusion Detection Honeypots are extremely high signal and low noise. They are easy to deploy and can be added to any environment. IDH's go beyond a typical D&R's call of duty by not only detecting attacks but actually deceive the attacker and lure them away from their target. The Incident Response team will get back a whole lot of extra time in a scenario where every minute is precious. 
+Intrusion Detection Honeypots are extremely high signal and low noise. They are easy to deploy and can be added to any environment. IDH's go beyond a typical D&R's call of duty by not only detecting attacks but also functions as a deceptive system which lures attackers away from their target. The Incident Response team will get a whole lot of extra time in a scenario where every minute is precious. 
 
-I can't help but envision a D&R program where honeypots are the central output. Instead of constantly wrangling and tuning detections in a SIEM, D&R engineers are building a web of IDH's which detect, alert, and deceive malicious actors. 
+I can't help but envision a strategy where Intrusion Detection Honeypots are the central focus and output of a successful D&R program. Instead of constantly wrangling and tuning detections in a SIEM, D&R engineers instead build a network of IDH's which detect, alert, and deceive malicious actors. 
 
 **We can be called D&R&D** *(ok, I'm half kidding.)*
 
