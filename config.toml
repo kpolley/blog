@@ -4,6 +4,7 @@ languageCode = "en"
 theme = "kiss"
 Paginate = 10 # Number of posts per page
 enableRobotsTXT = true
+googleAnalytics = "G-Q5L67XJHB1"
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
