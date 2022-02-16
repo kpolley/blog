@@ -24,12 +24,12 @@ For example:
 * If your org forbids the use of the `root` AWS account, then write a detection that triggers when the `root` account is used. You've just built a fantastic alert that will generate high signal for *compromised credentials!*
 * If your org forbids the use of `powershell` on CX agent machines, then write a detection that triggers when `powershell` is used on an CX agent machine. It is a great detection for *execution* attempts! 
 
-Policy-based detections are great because they are super easy to define and deploy. More importantly though, **policy-based detections leverage one of the greatest advantages most D&R teams don't even realize they have  --  ***knowledge*** over the environment they are protecting.** Attackers entering the environment have no idea what it looks like. 
+Policy-based detections are great because they are super easy to define. More importantly though, **policy-based detections leverage one of the greatest advantages most D&R teams don't even realize they have  --  ***knowledge*** over the environment they are protecting.** Attackers entering the environment have no idea what it looks like, so D&R teams can use that fact to very easily detect malicious intent.
 
 Policy-based detections are great, but limited. Such detections can only be used if there is a defined policy which can be violated. In addition, the policy needs to be *strong* or else you end up with false positives. This limitation restricts D&R teams from really taking advantage of policy-based detections across the org, especially in very open environments such as a typical development env. 
 
 # Intrusion Detection Honeypots
-An Intrusion Detection Honeypot (IDH) is a resource created for the purpose of triggering an alert when they are probed, used, or compromised. IDH's leverage the same advantage as policy-based detections, but do not share the same limitations. **Instead of struggling to extract signal out of a lot of noise, D&R teams could instead deploy IDH's to ***create*** their own signal!**
+An Intrusion Detection Honeypot (IDH) is a resource created for the purpose of triggering an alert when they are probed, used, or compromised. IDH's leverage the same advantage as policy-based detections, but do not share the same limitations. **Instead of struggling to extract signal out of a lot of noise, D&R teams deploy IDH's to ***create*** their own signal!** 
 
 For example:
 * *Honey servers* are servers that can be placed in your environment that should never be probed. 
