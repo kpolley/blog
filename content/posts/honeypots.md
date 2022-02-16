@@ -53,7 +53,7 @@ Let's say an attacker lands onto a server in your environment. There are 3 paths
     <i>Sample honeypot system</i>
 {{< /center >}}
 
-If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to pursue, the IDH effectively lures them away from the actual attack path and into a rabbit hole full of wasted time and valueless data. In addition, the Incident Response (IR) team gets high-signal notifications describing every move the attacker makes on the honeypots. **Even if it takes the attacker only 10 minutes to realize they were deceived, that is an extra 10 minutes the IR gets back to contain the threat!** 
+If the attacker finds either the honey IAM creds or honey Windows server to be attractive enough to pursue, the IDH effectively lures them away from the actual attack path and into a rabbit hole full of wasted time and valueless data. In addition, the Incident Response (IR) team gets high-signal notifications describing every move the attacker makes on the honeypots. **Even if the attacker eventually realizes they were deceived, it'd be too late as the IR team has already been notified and are on the case.** 
 
 # Detection & Response  --  & Deception
 Intrusion Detection Honeypots are extremely high signal and low noise. They are easy to deploy and can be added to any environment. IDH's go beyond a typical D&R's call of duty by not only detecting attacks but also functions as a deceptive system which lures attackers away from their target. The Incident Response team will get a whole lot of extra time in a situation where every minute is precious. 
