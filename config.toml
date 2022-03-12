@@ -1,6 +1,6 @@
 baseurl = "https://www.kpolley.com"
 languageCode = "en"
-# title = "Kpolley Blog"
+title = "Kpolley Blog"
 theme = "kiss"
 Paginate = 10 # Number of posts per page
 enableRobotsTXT = true
